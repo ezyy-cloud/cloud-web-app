@@ -3,7 +3,7 @@
     <v-app-bar app color="transparent" flat id="nav">
       <v-spacer></v-spacer>
 
-      <router-link to="/about">
+      <router-link to="/auth">
         <v-btn text>
           <span class="mr-2">SIGN UP | LOGIN</span>
           <v-icon>mdi-cloud-lock</v-icon>
