@@ -1,35 +1,25 @@
 <template>
-  <v-container>
-    <v-col class="mb-5" cols="12">
-      <v-row justify="center" align="center">
-        <v-container>
-          <v-item-group>
-            <v-container class="pa-0">
-              <v-row align="center" justify="center">
-                <v-col
-                  v-for="(eco, i) in ecosystem"
-                  :key="i"
-                  cols="12"
-                  md="3"
-                  align="center"
-                  justify="center"
-                >
-                  <v-item v-slot:default="{ active, toggle }">
-                    <v-img
-                      transition="fade-transition"
-                      :src="eco.source"
-                      width="150"
-                      @click="toggle"
-                    ></v-img>
-                  </v-item>
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-item-group>
-        </v-container>
-      </v-row>
-    </v-col>
-  </v-container>
+  <v-col>
+    <v-row align="center" justify="space-around">
+      <v-col v-for="(eco, i) in ecosystem" :key="i" align="center">
+        <v-card class="pt-8">
+            <v-img
+              transition="fade-transition"
+              :src="eco.source"
+              height="15vh"
+              width="25vh"
+              contain
+            ></v-img>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn text>
+            {{eco.text}}
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-col>
 </template>
 
 <script lang="ts">
@@ -41,20 +31,20 @@ export default Vue.extend({
   data: () => ({
     ecosystem: [
       {
-        text: "missa",
-        source: require("../assets/missa.svg")
-      },
-      {
-        text: "buzz",
-        source: require("../assets/buzz.svg")
-      },
-      {
-        text: "gringo",
+        text: "Gringo",
         source: require("../assets/gringo.png")
       },
       {
-        text: "esuites",
-        source: require("../assets/esuites.svg")
+        text: "Buzz",
+        source: require("../assets/buzz.png")
+      },
+      {
+        text: "Missa",
+        source: require("../assets/missa.png")
+      },
+      {
+        text: "eSuites",
+        source: require("../assets/eSuites.png")
       }
     ]
   })

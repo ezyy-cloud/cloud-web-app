@@ -1,20 +1,23 @@
 <template>
   <v-container>
-    <v-row class="text-center">
+    <v-row>
       <v-col cols="12">
         <v-img
           transition="fade-transition"
-          :src="require('../assets/logo.svg')"
-          class="my-3"
+          :src="require('../assets/ezyyWhite.png')"
           contain
-          height="200"
+          height="15vh"
         />
       </v-col>
+    </v-row>
 
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-black mb-3">The cloud. Made ezyy.</h1>
+    <v-row class="mt-12">
+      <v-col cols="12">
+        <h1 class="display-2 font-weight-black">The cloud. Made ezyy.</h1>
       </v-col>
+    </v-row>
 
+    <v-row cols="12" class="mt-12">
       <ApplicationDrawer />
     </v-row>
   </v-container>
