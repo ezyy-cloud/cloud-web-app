@@ -56,7 +56,7 @@ export default Vue.extend({
         link: 'https://missa.ezyy.cloud'
       },
       {
-        text: "eSuite",
+        text: "Cloud Suite",
         source: require("../assets/eSuites.png"),
         link: 'https://esuite.ezyy.cloud'
       }
