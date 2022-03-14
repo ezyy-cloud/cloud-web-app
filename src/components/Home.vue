@@ -17,9 +17,10 @@
       </v-col>
     </v-row>
 
-    <v-row cols="12" class="mt-12">
+    <v-row cols="12" class="mt-12 mb-12">
       <ApplicationDrawer />
     </v-row>
+
   </v-container>
 </template>
 

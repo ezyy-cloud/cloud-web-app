@@ -17,6 +17,14 @@ const routes = [
     // this generates a separate chunk (auth.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "auth" */ "../views/Auth.vue")
+  },
+  {
+    path: "/shop",
+    name: "Shop",
+    // route level code-splitting
+    // this generates a separate chunk (auth.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "shop" */ "../views/Shop.vue")
   }
 ];
 

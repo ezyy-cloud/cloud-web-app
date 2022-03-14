@@ -1,10 +1,10 @@
 <template>
   <div class="landing">
-    <Home />
+    <Home/>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 // @ is an alias to /src
 import Home from "@/components/Home.vue";
 
