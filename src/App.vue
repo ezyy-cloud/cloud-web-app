@@ -30,7 +30,7 @@
         elevation="16"
         fab
         x-large
-        style="position: fixed; bottom: 2vh; right: 1vh; z-index: 4;"
+        style="position: fixed; bottom: 14vh; right: 2vh; z-index: 4;"
         >
           <v-icon style="color: white;">{{ activeFab.icon }}</v-icon>
         </v-btn>
