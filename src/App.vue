@@ -95,7 +95,7 @@ export default Vue.extend({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #ffffff;
-  background: url("https://cdn.hipwallpaper.com/i/92/7/TOhDCG.jpg") no-repeat center center;
+  background: url("https://images4.fanpop.com/image/photos/19000000/blue-cloud-background-blue2-19029417-1920-986.jpg") no-repeat center center;
   background-size: cover;
 }
 
