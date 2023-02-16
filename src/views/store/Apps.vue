@@ -73,7 +73,7 @@ export default defineComponent({
             name: "Missa",
             shortDescription: "Missa",
             longDescription: "Vehicle tracking app",
-            logo: "https://www.ezyy.cloud/img/missa.d80043c4.png",
+            logo: "https://www.ezyy.cloud/assets/missa.492987f9.png",
             rating: 2.1,
             price: 0,
           },
