@@ -2,12 +2,13 @@
   <v-col>
     <v-row align="center" justify="space-around">
       <v-col v-for="(eco, i) in ecosystem" :key="i" align="center">
-        <v-hover v-slot:default="{ hover }" open-delay="200">
+        <v-hover v-slot="{ isHovering, props }">
           <v-card
-            :class="{ 'on-hover': hover }"
+            :elevation="isHovering ? 12 : 2"
+            :class="{ 'on-hover': isHovering }"
             class="mx-auto pt-8"
-            :elevation="hover ? 16 : 2"
             v-on:click="openApp(eco.link)"
+            v-bind="props"
           >
             <v-img
               transition="fade-transition"
@@ -29,40 +30,49 @@
   </v-col>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
+<script lang="ts" setup>
+import gringo from "@/assets/logos/gringo.png";
+import buzz from "@/assets/logos/buzz.png";
+import missa from "@/assets/logos/missa.png";
+import csuite from "@/assets/logos/csuite.png";
 
-export default Vue.extend({
-  name: "ApplicationDrawer",
-
-  data: () => ({
-    ecosystem: [
+ const ecosystem = [
       {
         text: "Gringo",
-        source: require("../assets/gringo.png"),
+        source: gringo,
         link: "https://gringo.ezyy.cloud"
       },
       {
         text: "Buzz",
-        source: require("../assets/buzz.png"),
+        source: buzz,
         link: "https://buzz.ezyy.cloud"
       },
       {
         text: "Missa",
-        source: require("../assets/missa.png"),
+        source: missa,
         link: "https://missa.ezyy.cloud"
       },
       {
         text: "Cloud Suite",
-        source: require("../assets/cSuites.png"),
+        source: csuite,
         link: "https://csuite.ezyy.cloud"
       }
     ]
-  }),
-  methods: {
-    openApp(app: any) {
+
+    function openApp(app: string) {
       window.location.href = app;
     }
-  }
-});
 </script>
+<style scoped>
+.v-card {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.v-card:not(.on-hover) {
+  opacity: 0.9;
+}
+
+.show-btns {
+  color: rgba(255, 255, 255, 1) !important;
+}
+</style>
